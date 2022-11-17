@@ -1,0 +1,28 @@
+﻿<Window x:Name="MainForm" x:Class="MaxTemp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MaxTemp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="480" Width="720" ResizeMode="NoResize" SizeToContent="Width" HorizontalAlignment="Left" VerticalAlignment="Top">
+    <Window.Background>
+        <ImageBrush ImageSource="/wartung-serverraum-einsatz-rcm-rechenzentrum.jpg"/>
+    </Window.Background>
+    <Viewbox Width="720" Height="480">
+        <Grid RenderTransformOrigin="0.507,0.548" Height="480" Width="720" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0*" />
+                <RowDefinition />
+                <RowDefinition Height="0*" />
+            </Grid.RowDefinitions>
+            <Label Name="lblAufforderung" Background="#00000000" Foreground="#FFFEFBFB" HorizontalAlignment="Center" Margin="0,108,0,0" Width="316" VerticalAlignment="Top" Height="44" Grid.Row="1" HorizontalContentAlignment="Center">Bitte klicken, um Temperaturen auszuwerten.
+            </Label>
+            <Button Name="btnAuswerten" Click="BtnAuswerten_Click" Margin="202,170,202,0" Grid.Row="1" Height="40" VerticalAlignment="Top">Auswerten</Button>
+            <TextBox x:Name="textBox" Margin="10,302,10,0" Grid.Row="1" TextWrapping="Wrap" IsReadOnly="True" Height="168" VerticalAlignment="Top"/>
+        </Grid>
+    </Viewbox>
+</Window>
